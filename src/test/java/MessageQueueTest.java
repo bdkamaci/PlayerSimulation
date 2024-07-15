@@ -27,7 +27,7 @@ public class MessageQueueTest {
     @Test
     void testBlockingTake() throws InterruptedException {
         // Verifies the blocking behavior of the take() method.
-        // take() will wait for a message to be available if the queue is empty.
+        // take() method will wait for a message to be available if the queue is empty.
         new Thread(() -> {
             try {
                 TimeUnit.SECONDS.sleep(1);
