@@ -10,9 +10,7 @@ public class GameEngine {
     private final Player player1;
     private final Player player2;
 
-    // Constants for player configuration
     private static final int MAX_MESSAGES = 10;
-    private static final String INITIAL_MESSAGE = "Start";
 
     public GameEngine() {
         this.messageQueue = new MessageQueue();
@@ -27,8 +25,8 @@ public class GameEngine {
         player2.play();
 
         try {
-            messageQueue.put(INITIAL_MESSAGE); // Starting the conversation with an initial message
-            logger.info("Game started with initial message: {}", INITIAL_MESSAGE);
+            messageQueue.put("Start"); // Starting the conversation with an initial message
+            logger.info("Game started with initial message: {}", "Start");
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             logger.error("Thread was interrupted", e);
