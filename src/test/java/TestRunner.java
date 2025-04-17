@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 public class TestRunner {
     public static void main(String[] args) {
         LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request()
-                .selectors(DiscoverySelectors.selectPackage("tech.example"))
+                .selectors(DiscoverySelectors.selectPackage("tech"))
                 .build();
 
         SummaryGeneratingListener listener = new SummaryGeneratingListener();
